@@ -1,0 +1,180 @@
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Arvo';
+  font-size: 16px;
+}
+a {text-decoration:none;}
+
+#container {
+  margin: auto;
+}
+#heading{
+  height: 4em;
+  border-bottom: 1px solid #dadfd9;
+}
+#logo {
+  font-family: 'Arvo', Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.3em;
+  text-align: left;
+  padding: 15px;
+  font-size: 1.9em;
+  letter-spacing: 3px;
+  display: inline-block;
+  float: left;
+}
+.mobnav {
+  display: inline;
+  font-size: 2em;
+  float:right;
+  padding: 15px;
+  color: black;
+  font-weight: bolder;
+}
+.responsive-menu {
+  display: none;
+  clear: left;
+  width: 100%;
+  padding-right: 20px;
+  text-align: right;
+  line-height: 1.3em;
+}
+.responsive-menu li {
+  background-color: #dadfd9;
+}
+.expand {
+  display: block; 
+}
+nav {
+  display:none;
+}
+#pagetitle{
+  display:none;
+}
+#content {
+  float: left;
+  padding: 2%;
+}
+.homeslideshow img {
+  max-width: 100%;
+  max-height: 100%;
+  float: left;
+}
+.hidden {
+  display:none;
+
+/*works page*/
+}
+.grid {
+  width: 100%;
+  float: left;  
+  padding: 1%;
+ }
+ .box img {
+  width: 98%;
+ }
+
+ /*info page*/
+#biog p{
+  float: left;
+  text-align: left;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #dadfd9;
+ }
+#sidebar {
+  display: inline-block;
+  padding: 20px;
+}
+#sidebar img{
+  width: 120px;
+}
+
+footer {
+    height: 300px;
+}
+
+
+@media only screen and (min-width: 738px) {
+  #container {
+    max-width: 1320px;
+    height: 900px;
+  }
+  #content {
+    width: 72%;
+    height: 100%;
+  }
+  #pagetitle {
+    display: inline;
+    float: left;
+    line-height: 5em;
+    vertical-align: text-bottom;
+    font-size: 1em;
+  }
+  .mobnav {
+    display:none;
+  }
+  .responsive-menu {
+   display: none;
+}
+ .leftcolumn{
+    clear: left;
+    float: left;
+    min-width: 200px;
+    padding: 20px;
+  }
+  #heading {
+    margin-top: 50px;
+    overflow: hidden;
+  }
+  nav {
+    display: inline;
+    text-align: right;
+    line-height: 2em;
+    color: gray;
+  }
+
+/*works page*/
+  .grid {
+    width: 50%;
+  }
+
+/*info page*/
+  #biog {
+    border-left: 1px solid #dadfd9;
+    height: 300px;
+    width: 60%;
+    float: left;
+    padding: 20px;
+    text-align: left;
+  }
+  #biog p{
+    border:none;
+  }
+  #sidebar {
+    border-left: 1px solid #dadfd9;
+    height: 300px;
+    width: 150px;
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 926px) {
+  .grid {
+    width: 33%;
+  }
+}
+
+@media only screen and (min-width: 1249px) {
+  .grid {
+    width: 25%;
+  }
+
+}
