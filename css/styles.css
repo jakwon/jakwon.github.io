@@ -46,9 +46,7 @@ a {text-decoration:none;}
   padding-right: 20px;
   text-align: right;
   line-height: 1.3em;
-}
-.responsive-menu li {
-  background-color: #dadfd9;
+  padding-top: 20px;
 }
 .expand {
   display: block; 
@@ -61,7 +59,9 @@ nav {
 }
 #content {
   float: left;
+  height: auto;
   padding: 2%;
+  overflow: auto;
 }
 .homeslideshow img {
   max-width: 100%;
@@ -74,12 +74,15 @@ nav {
 /*works page*/
 }
 .grid {
-  width: 100%;
   float: left;  
   padding: 1%;
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
  }
- .box img {
+ .grid img {
   width: 98%;
+  vertical-align: middle;
  }
 
  /*info page*/
@@ -97,6 +100,47 @@ nav {
   width: 120px;
 }
 
+a.prev, a.next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #dadfd9;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.prev:hover, a.next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+#slideshow {
+  height: auto;
+  margin: 0;
+}
+.viewslideshow img {
+  max-width: 100%;
+  float: left;
+
+}
+
 footer {
     height: 300px;
 }
@@ -109,7 +153,7 @@ footer {
   }
   #content {
     width: 72%;
-    height: 100%;
+    max-height: 900px;
   }
   #pagetitle {
     display: inline;
@@ -141,10 +185,6 @@ footer {
     color: gray;
   }
 
-/*works page*/
-  .grid {
-    width: 50%;
-  }
 
 /*info page*/
   #biog {
@@ -169,6 +209,7 @@ footer {
 @media only screen and (min-width: 926px) {
   .grid {
     width: 33%;
+    min-height: 220px;
   }
 }
 
